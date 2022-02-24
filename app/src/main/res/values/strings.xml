@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Khs UI</string>
+    <string name="see_all_format" formatted="true">See All %1$d/%2$d</string>
+    <string name="view_rates">View Rates</string>
+    <string name="by_room">By Room</string>
+    <string name="by_rates">By Rates</string>
+    <string name="room_service">Twin Single Beds, Cable TV, Free Wifi</string>
+    <string name="avg_per_room">Avg. Nightly / Room From</string>
+    <string name="sgd">SGD\u0020</string>
+    <string name="e_voucher_rate">YOUR E-VOUCHER RATE</string>
+    <string name="inclusive_breakfast">Inclusive of\nBreakfast</string>
+    <string name="percent_off">20% off\nIn-Room Service</string>
+    <string name="subject_service">Subject to GST &amp; Service charge</string>
+    <string name="members_deals">MEMBERS DEALS</string>
+</resources>

@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_back"
+            android:layout_width="@dimen/_30dp"
+            android:layout_height="@dimen/_30dp"
+            android:layout_marginStart="@dimen/_16dp"
+            android:layout_marginTop="@dimen/_8dp"
+            android:background="?attr/actionBarItemBackground"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_back" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_currency"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_8dp"
+            android:background="?attr/actionBarItemBackground"
+            android:padding="@dimen/_8dp"
+            app:layout_constraintBottom_toBottomOf="@id/iv_back"
+            app:layout_constraintEnd_toStartOf="@id/iv_chat"
+            app:layout_constraintTop_toTopOf="@id/iv_back"
+            app:srcCompat="@drawable/currency" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_chat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_16dp"
+            android:background="?attr/actionBarItemBackground"
+            android:padding="@dimen/_8dp"
+            app:layout_constraintBottom_toBottomOf="@id/iv_back"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/iv_back"
+            app:srcCompat="@drawable/chatactive" />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/_8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_back">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/start_line"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_begin="@dimen/_16dp" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/end_line"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_end="@dimen/_16dp" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_name"
+                    style="@style/App.TextStyle.Body2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_16dp"
+                    app:fontFamily="@font/sans_semi_condensed_extra_bold"
+                    app:layout_constraintEnd_toStartOf="@id/iv_next"
+                    app:layout_constraintStart_toStartOf="@id/start_line"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="Singapore" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/iv_next"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/actionBarItemBackground"
+                    app:layout_constraintEnd_toEndOf="@id/end_line"
+                    app:layout_constraintTop_toTopOf="@id/tv_name"
+                    app:srcCompat="@drawable/nextred" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_address"
+                    style="@style/App.TextStyle.Body3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_8dp"
+                    app:layout_constraintEnd_toStartOf="@id/iv_location"
+                    app:layout_constraintStart_toStartOf="@id/start_line"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_name"
+                    tools:text="Block Road." />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/iv_location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/actionBarItemBackground"
+                    app:layout_constraintBottom_toBottomOf="@id/tv_address"
+                    app:layout_constraintEnd_toEndOf="@id/end_line"
+                    app:srcCompat="@drawable/currentlocation" />
+
+                <com.aemerse.slider.ImageCarousel
+                    android:id="@+id/carousel"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_180dp"
+                    android:layout_marginTop="@dimen/_16dp"
+                    android:translationZ="@dimen/_8dp"
+                    app:carouselGravity="CENTER"
+                    app:carouselPaddingBottom="@dimen/_8dp"
+                    app:carouselPaddingTop="@dimen/_8dp"
+                    app:carouselType="SHOWCASE"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_address"
+                    app:scaleOnScroll="true"
+                    app:scalingFactor=".25"
+                    app:showBottomShadow="false"
+                    app:showCaption="false"
+                    app:showIndicator="false"
+                    app:showNavigationButtons="false"
+                    app:showTopShadow="false" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_count"
+                    style="@style/App.TextStyle.Body5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/small_shape_fill"
+                    android:backgroundTint="@color/black_light"
+                    android:elevation="@dimen/_30dp"
+                    android:gravity="center"
+                    android:padding="@dimen/_8dp"
+                    android:textColor="@color/white"
+                    app:layout_constraintBottom_toBottomOf="@id/carousel"
+                    app:layout_constraintEnd_toEndOf="@id/end_line"
+                    tools:text="See All 2/68" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_facility"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_16dp"
+                    android:orientation="horizontal"
+                    android:overScrollMode="never"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    app:layout_constraintEnd_toEndOf="@id/end_line"
+                    app:layout_constraintStart_toStartOf="@id/start_line"
+                    app:layout_constraintTop_toBottomOf="@id/carousel"
+                    tools:listitem="@layout/item_facility" />
+
+                <RadioGroup
+                    android:id="@+id/rgp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="@id/end_line"
+                    app:layout_constraintStart_toStartOf="@id/start_line"
+                    app:layout_constraintTop_toBottomOf="@id/rv_facility">
+
+                    <com.google.android.material.radiobutton.MaterialRadioButton
+                        android:id="@+id/radio_room"
+                        android:layout_width="0dp"
+                        android:layout_weight="0.5"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/radio_right_shape_bg"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:minWidth="@dimen/_150dp"
+                        android:padding="@dimen/_8dp"
+                        android:text="@string/by_room"
+                        android:textColor="#10415b"
+                        android:textStyle="bold" />
+
+                    <com.google.android.material.radiobutton.MaterialRadioButton
+                        android:id="@+id/radio_rate"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="-32dp"
+                        android:layout_width="0dp"
+                        android:layout_weight="0.5"
+                        android:background="@drawable/radio_left_shape_bg"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:minWidth="@dimen/_150dp"
+                        android:padding="@dimen/_8dp"
+                        android:text="@string/by_rates"
+                        android:textColor="#10415b"
+                        android:textStyle="bold" />
+
+                </RadioGroup>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_room"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_24dp"
+                    android:nestedScrollingEnabled="false"
+                    android:overScrollMode="never"
+                    android:visibility="gone"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    app:layout_constraintEnd_toEndOf="@id/end_line"
+                    app:layout_constraintStart_toStartOf="@id/start_line"
+                    app:layout_constraintTop_toBottomOf="@id/rgp"
+                    tools:itemCount="2"
+                    tools:listitem="@layout/item_room" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_rate"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_24dp"
+                    android:nestedScrollingEnabled="false"
+                    android:overScrollMode="never"
+                    android:visibility="gone"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    app:layout_constraintEnd_toEndOf="@id/end_line"
+                    app:layout_constraintStart_toStartOf="@id/start_line"
+                    app:layout_constraintTop_toBottomOf="@id/rgp"
+                    tools:itemCount="2"
+                    tools:listitem="@layout/item_rate" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

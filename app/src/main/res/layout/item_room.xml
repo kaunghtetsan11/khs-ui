@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="room"
+            type="com.khs.khs_ui.model.RoomItem" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_16dp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv"
+            resImage="@{room.imageRes}"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_150dp"
+            android:scaleType="fitXY"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@tools:sample/backgrounds/scenic" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_title"
+            style="@style/App.TextStyle.Body3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8dp"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="@{room.title}"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@id/btn_view_rates"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv"
+            tools:text="Deluxe Twin" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_view_rates"
+            style="?attr/materialButtonOutlinedStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/view_rates"
+            android:textAllCaps="false"
+            android:textColor="@color/light_orange"
+            android:textSize="@dimen/_12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv_title"
+            app:strokeColor="@color/light_orange"
+            app:strokeWidth="1dp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_facilities"
+            style="@style/App.TextStyle.Body5"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_4dp"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:textColor="@color/grey"
+            android:text="@string/room_service"
+            app:layout_constraintEnd_toStartOf="@id/btn_view_rates"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_title" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_avg"
+            style="@style/App.TextStyle.Body4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_16dp"
+            android:text="@string/avg_per_room"
+            app:layout_constraintEnd_toStartOf="@id/tv_sgd"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_facilities" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_sgd"
+            style="@style/App.TextStyle.Body5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sgd"
+            app:layout_constraintBaseline_toBaselineOf="@+id/tv_avg"
+            app:layout_constraintEnd_toStartOf="@id/tv_price" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_price"
+            style="@style/App.TextStyle.Body3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{room.price}"
+            android:textStyle="bold"
+            app:layout_constraintBaseline_toBaselineOf="@+id/tv_avg"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:text="161.42" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:layout_marginTop="@dimen/_8dp"
+            android:background="@color/grey"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_avg" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
