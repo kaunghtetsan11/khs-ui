@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Khs UI</string>
+    <string name="app_name">Khs-UI</string>
     <string name="see_all_format" formatted="true">See All %1$d/%2$d</string>
     <string name="view_rates">View Rates</string>
     <string name="by_room">By Room</string>
