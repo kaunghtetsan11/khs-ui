@@ -14,7 +14,7 @@
             android:id="@+id/iv"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            tools:src="@tools:sample/backgrounds/scenic" />
+            tools:src="@drawable/hotel_1" />
 
     </com.google.android.material.card.MaterialCardView>
 

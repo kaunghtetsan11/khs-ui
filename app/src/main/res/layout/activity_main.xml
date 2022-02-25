@@ -112,7 +112,7 @@
                     app:srcCompat="@drawable/currentlocation" />
 
                 <com.aemerse.slider.ImageCarousel
-                    android:id="@+id/carousel"
+                    android:id="@+id/sld_images"
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/_180dp"
                     android:layout_marginTop="@dimen/_16dp"
@@ -143,7 +143,7 @@
                     android:gravity="center"
                     android:padding="@dimen/_8dp"
                     android:textColor="@color/white"
-                    app:layout_constraintBottom_toBottomOf="@id/carousel"
+                    app:layout_constraintBottom_toBottomOf="@id/sld_images"
                     app:layout_constraintEnd_toEndOf="@id/end_line"
                     tools:text="See All 2/68" />
 
@@ -157,11 +157,11 @@
                     app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                     app:layout_constraintEnd_toEndOf="@id/end_line"
                     app:layout_constraintStart_toStartOf="@id/start_line"
-                    app:layout_constraintTop_toBottomOf="@id/carousel"
+                    app:layout_constraintTop_toBottomOf="@id/sld_images"
                     tools:listitem="@layout/item_facility" />
 
                 <RadioGroup
-                    android:id="@+id/rgp"
+                    android:id="@+id/radio_group"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
@@ -211,7 +211,7 @@
                     app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                     app:layout_constraintEnd_toEndOf="@id/end_line"
                     app:layout_constraintStart_toStartOf="@id/start_line"
-                    app:layout_constraintTop_toBottomOf="@id/rgp"
+                    app:layout_constraintTop_toBottomOf="@id/radio_group"
                     tools:itemCount="2"
                     tools:listitem="@layout/item_room" />
 
@@ -226,7 +226,7 @@
                     app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                     app:layout_constraintEnd_toEndOf="@id/end_line"
                     app:layout_constraintStart_toStartOf="@id/start_line"
-                    app:layout_constraintTop_toBottomOf="@id/rgp"
+                    app:layout_constraintTop_toBottomOf="@id/radio_group"
                     tools:itemCount="2"
                     tools:listitem="@layout/item_rate" />
 

@@ -36,8 +36,8 @@ class MainActivity : AppCompatActivity() {
 
     private fun setUpHotels() {
         with(_binding) {
-            carousel.registerLifecycle(lifecycle)
-            carousel.carouselListener = object : CarouselListener {
+            sldImages.registerLifecycle(lifecycle)
+            sldImages.carouselListener = object : CarouselListener {
                 override fun onCreateViewHolder(
                     layoutInflater: LayoutInflater,
                     parent: ViewGroup
@@ -61,7 +61,7 @@ class MainActivity : AppCompatActivity() {
                     }
                 }
             }
-            carousel.onScrollListener = object : CarouselOnScrollListener {
+            sldImages.onScrollListener = object : CarouselOnScrollListener {
 
                 override fun onScrollStateChanged(
                     recyclerView: RecyclerView,
@@ -96,7 +96,7 @@ class MainActivity : AppCompatActivity() {
                     // ...
                 }
             }
-            carousel.setData(DataSource.hotels.map {
+            sldImages.setData(DataSource.hotels.map {
                 CarouselItem(imageDrawable = it.imageRes)
             })
         }
@@ -122,11 +122,11 @@ class MainActivity : AppCompatActivity() {
 
     private fun setListener() {
         with(_binding) {
-            rgp.setOnCheckedChangeListener { _, checkedId ->
+            radioGroup.setOnCheckedChangeListener { _, checkedId ->
                 rvRoom.isVisible = checkedId == R.id.radio_room
                 rvRate.isVisible = checkedId == R.id.radio_rate
             }
-            rgp.check(R.id.radio_room)
+            radioGroup.check(R.id.radio_room)
         }
     }
 }
