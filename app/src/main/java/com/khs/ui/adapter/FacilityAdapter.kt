@@ -31,7 +31,7 @@ class FacilityAdapter : ListAdapter<FacilityItem, FacilityAdapter.ViewHolder>(CO
             facility: FacilityItem?
         ) {
             with(binding) {
-                this.service = facility
+                this.facility = facility
                 executePendingBindings()
             }
         }
