@@ -7,7 +7,7 @@
 
         <variable
             name="room"
-            type="com.khs.khs_ui.model.RoomItem" />
+            type="com.khs.ui.model.RoomItem" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

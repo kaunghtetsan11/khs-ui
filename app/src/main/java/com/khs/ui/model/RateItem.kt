@@ -1,4 +1,4 @@
-package com.khs.khs_ui.model
+package com.khs.ui.model
 
 data class RateItem(
     val title: String,

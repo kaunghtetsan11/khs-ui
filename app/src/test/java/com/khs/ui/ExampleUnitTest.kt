@@ -1,4 +1,4 @@
-package com.khs.khs_ui
+package com.khs.ui
 
 import org.junit.Test
 

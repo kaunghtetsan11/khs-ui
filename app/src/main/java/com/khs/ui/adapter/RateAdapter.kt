@@ -1,15 +1,15 @@
-package com.khs.khs_ui.adapter
+package com.khs.ui.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.khs.khs_ui.R
-import com.khs.khs_ui.databinding.ItemFacilityBinding
-import com.khs.khs_ui.model.FacilityItem
+import com.khs.ui.R
+import com.khs.ui.databinding.ItemRateBinding
+import com.khs.ui.model.RateItem
 
-class FacilityAdapter : ListAdapter<FacilityItem, FacilityAdapter.ViewHolder>(COMPARATOR) {
+class RateAdapter : ListAdapter<RateItem, RateAdapter.ViewHolder>(COMPARATOR) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder =
         ViewHolder(parent)
@@ -22,30 +22,30 @@ class FacilityAdapter : ListAdapter<FacilityItem, FacilityAdapter.ViewHolder>(CO
         parent: ViewGroup
     ) : RecyclerView.ViewHolder(
         LayoutInflater.from(parent.context)
-            .inflate(R.layout.item_facility, parent, false)
+            .inflate(R.layout.item_rate, parent, false)
     ) {
-        private val binding = ItemFacilityBinding.bind(itemView)
+        private val binding = ItemRateBinding.bind(itemView)
 
         fun bind(
-            facility: FacilityItem?
+            rate: RateItem?
         ) {
             with(binding) {
-                this.service = facility
+                this.rate = rate
                 executePendingBindings()
             }
         }
     }
 
     companion object {
-        val COMPARATOR = object : DiffUtil.ItemCallback<FacilityItem>() {
+        val COMPARATOR = object : DiffUtil.ItemCallback<RateItem>() {
             override fun areItemsTheSame(
-                oldItem: FacilityItem,
-                newItem: FacilityItem
-            ): Boolean = oldItem.name == newItem.name
+                oldItem: RateItem,
+                newItem: RateItem
+            ): Boolean = oldItem.title == newItem.title
 
             override fun areContentsTheSame(
-                oldItem: FacilityItem,
-                newItem: FacilityItem
+                oldItem: RateItem,
+                newItem: RateItem
             ): Boolean = oldItem == newItem
         }
     }

@@ -7,7 +7,7 @@
 
         <variable
             name="rate"
-            type="com.khs.khs_ui.model.RateItem" />
+            type="com.khs.ui.model.RateItem" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

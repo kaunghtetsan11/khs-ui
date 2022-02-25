@@ -1,4 +1,4 @@
-package com.khs.khs_ui.binding
+package com.khs.ui.binding
 
 import android.graphics.drawable.Drawable
 import android.net.Uri

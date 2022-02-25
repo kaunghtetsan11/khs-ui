@@ -1,13 +1,13 @@
-package com.khs.khs_ui.adapter
+package com.khs.ui.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.khs.khs_ui.R
-import com.khs.khs_ui.databinding.ItemRoomBinding
-import com.khs.khs_ui.model.RoomItem
+import com.khs.ui.R
+import com.khs.ui.databinding.ItemRoomBinding
+import com.khs.ui.model.RoomItem
 
 class RoomAdapter : ListAdapter<RoomItem, RoomAdapter.ViewHolder>(COMPARATOR) {
 

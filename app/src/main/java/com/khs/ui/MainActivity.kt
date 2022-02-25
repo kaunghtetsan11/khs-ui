@@ -1,10 +1,10 @@
-package com.khs.khs_ui
+package com.khs.ui
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.ImageView
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.core.view.isVisible
 import androidx.recyclerview.widget.RecyclerView
@@ -13,11 +13,11 @@ import com.aemerse.slider.listener.CarouselListener
 import com.aemerse.slider.listener.CarouselOnScrollListener
 import com.aemerse.slider.model.CarouselItem
 import com.aemerse.slider.utils.setImage
-import com.khs.khs_ui.adapter.RateAdapter
-import com.khs.khs_ui.adapter.RoomAdapter
-import com.khs.khs_ui.adapter.FacilityAdapter
-import com.khs.khs_ui.databinding.ActivityMainBinding
-import com.khs.khs_ui.databinding.ItemHotelBinding
+import com.khs.ui.databinding.ActivityMainBinding
+import com.khs.ui.databinding.ItemHotelBinding
+import com.khs.ui.adapter.FacilityAdapter
+import com.khs.ui.adapter.RateAdapter
+import com.khs.ui.adapter.RoomAdapter
 
 class MainActivity : AppCompatActivity() {
     private lateinit var _binding: ActivityMainBinding

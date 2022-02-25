@@ -7,7 +7,7 @@
 
         <variable
             name="service"
-            type="com.khs.khs_ui.model.FacilityItem" />
+            type="com.khs.ui.model.FacilityItem" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

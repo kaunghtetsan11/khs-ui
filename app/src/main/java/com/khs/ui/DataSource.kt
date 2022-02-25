@@ -1,9 +1,9 @@
-package com.khs.khs_ui
+package com.khs.ui
 
-import com.khs.khs_ui.model.FacilityItem
-import com.khs.khs_ui.model.HotelItem
-import com.khs.khs_ui.model.RateItem
-import com.khs.khs_ui.model.RoomItem
+import com.khs.ui.model.FacilityItem
+import com.khs.ui.model.HotelItem
+import com.khs.ui.model.RateItem
+import com.khs.ui.model.RoomItem
 
 object DataSource {
     val hotels = listOf(
