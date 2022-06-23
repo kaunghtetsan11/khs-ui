@@ -10,7 +10,7 @@ object DataSource {
         HotelItem(
             id = 1,
             name = "Lotte Hotel Yangon",
-            address = "56 Pyay Road, Hlaing Township, 112345 Yangon, Myanmar",
+            address = "56 Pyay Road, Hola Township, 112345 Yangon, Myanmar",
             imageRes = R.drawable.hotel_1,
         ),
         HotelItem(
