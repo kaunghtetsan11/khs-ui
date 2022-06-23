@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "890540951714",
+    "project_id": "cicd-30512",
+    "storage_bucket": "cicd-30512.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:890540951714:android:d8b50f9fb8a0c84f2b6ffb",
+        "android_client_info": {
+          "package_name": "com.khs.ui"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "890540951714-86q1fhftchcpoca1g4d89q34bnsa1iaj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDS13kRDXE72TnPvSUUE6XLph0Kq1fxh38"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "890540951714-86q1fhftchcpoca1g4d89q34bnsa1iaj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
