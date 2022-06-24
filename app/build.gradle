@@ -28,7 +28,7 @@ android {
         debug {
             firebaseAppDistribution {
                 artifactType="APK"
-                testers="kaunghtetsan1101@gmail.com, minnthawkhantt@gmail.com"
+                testers="kstar380@gmail.com, minnthawkhantt@gmail.com"
             }
         }
     }
