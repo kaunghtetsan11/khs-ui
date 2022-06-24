@@ -25,12 +25,12 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
 
-        debug {
-            firebaseAppDistribution {
-                artifactType="APK"
-                testers="kstar380@gmail.com, minnthawkhantt@gmail.com"
-            }
-        }
+//        debug {
+//            firebaseAppDistribution {
+//                artifactType="APK"
+//                testers="kstar380@gmail.com, minnthawkhantt@gmail.com"
+//            }
+//        }
     }
 
     buildFeatures {
