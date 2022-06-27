@@ -20,8 +20,7 @@ jobs:
 #                  curl -sL firebase.tools | bash
       - run:
           name: "Install fastlane"
-          command: |
-            bundle check || bundle install --path vendor/bundle | bash
+          command: bundle check || bundle install --path vendor/bundle
       - run:
           name: "Deploy build to Firebase"
           command: |
