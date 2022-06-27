@@ -34,7 +34,7 @@ jobs:
             name: "Deploy build to Firebase"
             command:
               bundle exec fastlane beta
-                    branch:"master" app_id:$FIREBASE_APP_ID firebase_token:$FIREBASE_TOKEN
+#                    branch:"master" app_id:$FIREBASE_APP_ID firebase_token:$FIREBASE_TOKEN
 
 workflows:
   test-apk:
