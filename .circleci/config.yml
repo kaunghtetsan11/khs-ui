@@ -20,10 +20,12 @@ jobs:
                   curl -sL firebase.tools | bash
       - run:
           name: "Install fastlane"
-          command: bundle install
+          command: |
+                  bundle install | bash
       - run:
           name: "Deploy build to Firebase"
-          command: bundle exec fastlane beta
+          command: |
+                  bundle exec fastlane beta | bash
 #            branch:"master" app_id:$FIREBASE_APP_ID firebase_token:$FIREBASE_TOKEN
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
