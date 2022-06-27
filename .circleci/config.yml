@@ -18,7 +18,7 @@ jobs:
             command: bundle check || bundle install --path vendor/bundle
       - run:
             name: "build"
-            command: bundle exec fastlane android build
+            command: bundle exec fastlane build
       - run:
             name: "Deploy build to Firebase"
             command:
