@@ -29,6 +29,7 @@ platform :android do
     )
   end
 
+platform :android do
   desc "Submit a new Beta Build to Firebase App Distribution"
   lane :beta do
      firebase_app_distribution(
@@ -36,6 +37,7 @@ platform :android do
          groups: "test-team",
          release_notes: "Got and Update!!"
      )
+  end
   end
 
   desc "Deploy a new version to the Google Play"
