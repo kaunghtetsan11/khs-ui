@@ -17,8 +17,6 @@ jobs:
       - run:
           name : "configure build"
           command: bundle update fastlane && gem install bundler && bundle install
-      - restore_cache:
-               <<: *general_cache_key
       - run:
           name: "Install Firebase CLI"
           command: |
