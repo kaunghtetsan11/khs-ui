@@ -16,13 +16,14 @@ jobs:
       - checkout
       - run:
           name : "configure build"
-          command: bundle update fastlane && gem install bundler && bundle install
+          command: |
+                  bundle update fastlane && gem install bundler && bundle install
       - run:
           name: "Install Firebase CLI"
           command: |
                   curl -sL firebase.tools | bash
       - run:
-          name: "Deploy alpha build to Firebase"
+          name: "Deploy build to Firebase"
           command: |
                   bundle exec fastlane beta
 #            branch:"master" app_id:$FIREBASE_APP_ID firebase_token:$FIREBASE_TOKEN
