@@ -31,7 +31,4 @@ jobs:
 workflows:
   test-apk-workflow:
     jobs:
-      - build
-      - test-apk:
-          requires:
-            - build
+      - test-apk
