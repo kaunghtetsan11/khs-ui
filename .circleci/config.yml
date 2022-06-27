@@ -21,7 +21,7 @@ jobs:
       - run:
           name: "Install fastlane"
           command: |
-                  bundle install | bash
+            bundle check || bundle install --path vendor/bundle | bash
       - run:
           name: "Deploy build to Firebase"
           command: |
